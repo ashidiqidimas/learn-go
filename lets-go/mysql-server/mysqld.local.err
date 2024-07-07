@@ -7,3 +7,6 @@
 2024-07-07T08:22:12.392638Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
 2024-07-07T08:22:12.398207Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /tmp/mysqlx.sock
 2024-07-07T08:22:12.398227Z 0 [System] [MY-010931] [Server] /Users/Shared/DBngin/mysql/8.0.33/bin/mysqld: ready for connections. Version: '8.0.33'  socket: '/tmp/mysql_3306.sock'  port: 3306  MySQL Community Server - GPL.
+2024-07-07T09:18:15.016318Z 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2024-07-07T09:18:17.022695Z 0 [Warning] [MY-010909] [Server] /Users/Shared/DBngin/mysql/8.0.33/bin/mysqld: Forcing close of thread 19  user: 'root'.
+2024-07-07T09:18:18.170697Z 0 [System] [MY-010910] [Server] /Users/Shared/DBngin/mysql/8.0.33/bin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
