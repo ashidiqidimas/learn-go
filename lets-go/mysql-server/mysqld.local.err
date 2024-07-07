@@ -1,0 +1,9 @@
+2024-07-07T08:22:12.251339Z 0 [System] [MY-010116] [Server] /Users/Shared/DBngin/mysql/8.0.33/bin/mysqld (mysqld 8.0.33) starting as process 29988
+2024-07-07T08:22:12.252425Z 0 [Warning] [MY-010159] [Server] Setting lower_case_table_names=2 because file system for /Users/dimas/Documents/Learn/Backend/learn-go/lets-go/mysql-server/ is case insensitive
+2024-07-07T08:22:12.252598Z 0 [Warning] [MY-010122] [Server] One can only use the --user switch if running as root
+2024-07-07T08:22:12.298475Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-07-07T08:22:12.332919Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-07-07T08:22:12.392596Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2024-07-07T08:22:12.392638Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2024-07-07T08:22:12.398207Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /tmp/mysqlx.sock
+2024-07-07T08:22:12.398227Z 0 [System] [MY-010931] [Server] /Users/Shared/DBngin/mysql/8.0.33/bin/mysqld: ready for connections. Version: '8.0.33'  socket: '/tmp/mysql_3306.sock'  port: 3306  MySQL Community Server - GPL.

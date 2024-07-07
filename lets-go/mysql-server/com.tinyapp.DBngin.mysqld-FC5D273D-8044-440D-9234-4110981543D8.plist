@@ -1,0 +1,31 @@
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+        <key>Label</key>             <string>com.tinyapp.DBngin.mysqld-FC5D273D-8044-440D-9234-4110981543D8</string>
+        <key>ProcessType</key>       <string>Interactive</string>
+        <key>Disabled</key>          <false/>
+        <key>RunAtLoad</key>         <true/>
+        <key>KeepAlive</key>         <true/>
+        <key>SessionCreate</key>     <true/>
+        <key>LaunchOnlyOnce</key>    <false/>
+        <key>UserName</key>          <string>_mysql</string>
+        <key>GroupName</key>         <string>_mysql</string>
+        <key>ExitTimeOut</key>       <integer>600</integer>
+        <key>Program</key>           <string>/Users/Shared/DBngin/mysql/8.0.33/bin/mysqld</string>
+        <key>ProgramArguments</key>
+            <array>
+                <string>/Users/Shared/DBngin/mysql/8.0.33/bin/mysqld</string>
+                <string>--disable-log-bin</string>
+                <string>--socket=/tmp/mysql_3306.sock</string>
+                <string>--user=_mysql</string>
+                <string>--port=3306</string>
+                <string>--basedir=/Users/Shared/DBngin/mysql/8.0.33</string>
+                <string>--datadir=/Users/dimas/Documents/Learn/Backend/learn-go/lets-go/mysql-server</string>
+                <string>--plugin-dir=/Users/Shared/DBngin/mysql/8.0.33/lib/plugin</string>
+                <string>--log-error=/Users/dimas/Documents/Learn/Backend/learn-go/lets-go/mysql-server/mysqld.local.err</string>
+                <string>--pid-file=/Users/dimas/Documents/Learn/Backend/learn-go/lets-go/mysql-server/mysql.pid</string>
+            </array>
+        <key>WorkingDirectory</key><string>/Users/dimas/Documents/Learn/Backend/learn-go/lets-go/mysql-server</string>
+    </dict>
+    </plist>
