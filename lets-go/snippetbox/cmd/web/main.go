@@ -15,7 +15,7 @@ import (
 type application struct {
 	errorLog *log.Logger
 	infoLog  *log.Logger
-	model    *models.SnippetModel
+	snippets *models.SnippetModel
 }
 
 func main() {
@@ -32,12 +32,15 @@ func main() {
 		errorLog.Fatal(err)
 	}
 
-	defer db.Close()
+	defer func() {
+		err = db.Close()
+		errorLog.Println(err)
+	}()
 
 	app := &application{
 		errorLog: errorLog,
 		infoLog:  infoLog,
-		model:    &models.SnippetModel{DB: db},
+		snippets: &models.SnippetModel{DB: db},
 	}
 
 	infoLog.Printf("Starting server on %s\n", *addr)
