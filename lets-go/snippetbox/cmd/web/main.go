@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"flag"
 	color "github.com/ashidiqidimas/snippetbox/internal"
+	"github.com/ashidiqidimas/snippetbox/internal/models"
 	"log"
 	"net/http"
 	"os"
@@ -14,6 +15,7 @@ import (
 type application struct {
 	errorLog *log.Logger
 	infoLog  *log.Logger
+	model    *models.SnippetModel
 }
 
 func main() {
@@ -35,6 +37,7 @@ func main() {
 	app := &application{
 		errorLog: errorLog,
 		infoLog:  infoLog,
+		model:    &models.SnippetModel{DB: db},
 	}
 
 	infoLog.Printf("Starting server on %s\n", *addr)
