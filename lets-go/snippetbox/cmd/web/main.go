@@ -22,7 +22,8 @@ func main() {
 	addr := flag.String("addr", ":4000", "HTTP network address")
 	flag.Parse()
 
-	dsn := flag.String("dsn", "root:Ngolo7golo!!@/snippetbox?parseTime=true", "MySQL data source name")
+	dsn := flag.String("dsn", "web:pass@/snippetbox?parseTime=true", "MySQL data source name")
+	//dsn := flag.String("dsn", "root:Ngolo7golo!!@/snippetbox?parseTime=true", "MySQL data source name")
 
 	infoLog := log.New(os.Stdout, color.Blue+"INFO\t"+color.Reset, log.Ldate|log.Ltime)
 	errorLog := log.New(os.Stderr, color.Red+"ERROR\t"+color.Reset, log.Ldate|log.Ltime|log.Lshortfile)
