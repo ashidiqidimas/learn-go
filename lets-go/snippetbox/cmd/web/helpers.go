@@ -10,7 +10,7 @@ import (
 // Respond to the w with a 500 Internal Server Error. Additionally, log the err and the debug stack to the `errorLog`.
 func (app *application) serverError(w http.ResponseWriter, err error) {
 	trace := fmt.Sprintf("%s\n%s", err.Error(), debug.Stack())
-	app.errorLog.Output(2, trace)
+	_ = app.errorLog.Output(2, trace)
 
 	http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 }
