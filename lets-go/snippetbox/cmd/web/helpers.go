@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"runtime/debug"
+	"time"
 )
 
 // Respond to the w with a 500 Internal Server Error. Additionally, log the err and the debug stack to the `errorLog`.
@@ -48,5 +49,11 @@ func (app *application) render(w http.ResponseWriter, status int, page string, d
 	if err != nil {
 		app.serverError(w, err)
 		return
+	}
+}
+
+func newTemplateData() *templateData {
+	return &templateData{
+		CurrentYear: time.Now().Year(),
 	}
 }
