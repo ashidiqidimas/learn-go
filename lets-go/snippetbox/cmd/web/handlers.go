@@ -21,26 +21,30 @@ func (app *application) home(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	for _, snippet := range snippets {
-		fmt.Fprintf(w, "%+v\n", snippet)
+	data := TemplateData{
+		Snippets: snippets,
 	}
 
-	// files := []string{
-	//     "./ui/html/base.tmpl",
-	//     "./ui/html/partials/nav.tmpl",
-	//     "./ui/html/pages/home.tmpl",
-	// }
+	//for _, snippet := range snippets {
+	//	fmt.Fprintf(w, "%+v\n", snippet)
+	//}
 
-	// ts, err := template.ParseFiles(files...)
-	// if err != nil {
-	//     app.serverError(w, err)
-	//     return
-	// }
+	files := []string{
+		"./ui/html/base.tmpl",
+		"./ui/html/partials/nav.tmpl",
+		"./ui/html/pages/home.tmpl",
+	}
 
-	// err = ts.ExecuteTemplate(w, "base", nil)
-	// if err != nil {
-	//     app.serverError(w, err)
-	// }
+	ts, err := template.ParseFiles(files...)
+	if err != nil {
+		app.serverError(w, err)
+		return
+	}
+
+	err = ts.ExecuteTemplate(w, "base", data)
+	if err != nil {
+		app.serverError(w, err)
+	}
 }
 func (app *application) snippetView(w http.ResponseWriter, r *http.Request) {
 	id, err := strconv.Atoi(r.URL.Query().Get("id"))
