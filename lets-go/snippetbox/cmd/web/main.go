@@ -5,12 +5,11 @@ import (
 	"flag"
 	color "github.com/ashidiqidimas/snippetbox/internal"
 	"github.com/ashidiqidimas/snippetbox/internal/models"
+	_ "github.com/go-sql-driver/mysql"
 	"html/template"
 	"log"
 	"net/http"
 	"os"
-
-	_ "github.com/go-sql-driver/mysql"
 )
 
 type application struct {
